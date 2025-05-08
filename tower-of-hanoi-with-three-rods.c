@@ -1,4 +1,6 @@
 #include <stdio.h>
+#define START_ROD 1
+#define END_ROD 3
 
 void hanoi(int n, int start, int end) {
     if (n == 1) {
@@ -9,10 +11,8 @@ void hanoi(int n, int start, int end) {
 
 int main() {
     int amountOfDisk = 1;
-    int startRod = 1;
-    int endRod = 3;
 
-    hanoi(amountOfDisk, 1, 3);
+    hanoi(amountOfDisk, START_ROD, END_ROD);
     
     return 0;
 }
