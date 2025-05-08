@@ -23,16 +23,16 @@ void hanoi(int n, int start, int end) {
         print_move(start, end);
         return;
     } else {
-        int sumStartToEnd = sum_of_start_to_end(START_ROD, END_ROD); // 6
-        int other = sumStartToEnd - (start + end); // 6 - 4 = 2
-        hanoi(n - 1, start, other); // 1, 1, 2
-        print_move(start, end); // 1 -> 3
-        hanoi(n - 1, other, end); // 1, 2, 3
+        int sumStartToEnd = sum_of_start_to_end(START_ROD, END_ROD);
+        int other = sumStartToEnd - (start + end);
+        hanoi(n - 1, start, other);
+        print_move(start, end);
+        hanoi(n - 1, other, end);
     }
 }
 
 int main() {
-    int amountOfDisk = 2;
+    int amountOfDisk = 4;
 
     hanoi(amountOfDisk, START_ROD, END_ROD);
 
